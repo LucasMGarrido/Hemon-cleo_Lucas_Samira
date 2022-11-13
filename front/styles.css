@@ -1,0 +1,240 @@
+body{
+    background: #C9E8F2;
+}
+
+.containerHello{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin: 35px 0 20px 0;
+}
+
+.cardHello{
+    width: 1196px;
+    height: 110px;
+    
+    background: rgba(173, 167, 236, 0.5);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    justify-content: space-between;
+}
+
+.containerHelloCenter{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.containerHelloCenter img{
+    position: relative;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.cardHello h1, p{
+    margin: 30px 0 0 40px;
+    margin-bottom: -30px;
+}
+
+.containerCardsL1{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px 0;
+}
+
+
+
+.cardMapa{
+    box-sizing: border-box;
+
+    position: relative;
+    width: 588px;
+    height: 330px;
+
+    border: 3px solid #ADA7EC;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    margin-right: 20px;
+}
+
+/*-----------------------CARD ADD---------------------------*/
+.cardAdd{
+    position: relative;
+    width: 582px;
+    height: 333px;
+    
+    background: rgba(173, 167, 236, 0.5);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.cardAdd .test{
+    margin-top: 48px;
+}
+
+.cardAdd h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.cardAdd .center_container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 14px 0;
+    width: 100%;
+}
+
+.cardAdd .inputCenter{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 7px 0;
+    width: 100%;
+}
+
+.cardAdd input{
+    box-sizing: border-box;
+
+    padding: 0 0 0 20px;
+    width: 90%;
+    height: 30px;
+
+    margin: 7px auto;
+    display: block;
+
+    background: #F3E9E9;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.cardAdd .inputLadoLado{
+    display: flex;
+    justify-content: center;
+    margin: -7px auto 0 auto;
+}
+
+.cardAdd .inputLadoLado input {
+    width: 40%;
+    height: 30px;
+}
+
+.btn-add{
+    box-sizing: border-box;
+
+    font-weight: 600;
+
+    width: 90%;
+    height: 30px;
+    margin: 0 auto;
+
+    background: #0168CD;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 53px;
+}
+
+.containerCardsL2{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 35px 0;
+}
+
+
+/*----------------------- CARD MENSAGEM ---------------------------*/
+.cardMensagem{
+    position: relative;
+    width: 345px;
+    height: 209px;
+
+    margin-right: 20px;
+    
+    background: rgba(173, 167, 236, 0.5);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.listar_container img{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5px auto 0 auto;
+    width: 50%;
+}
+
+
+
+
+
+/*----------------------- CARD LISTAR ---------------------------*/
+
+.cardListar{
+    box-sizing: border-box;
+
+    position: relative;
+    width: 466px;
+    height: 209px;
+
+    margin-right: 20px;
+    
+    background: rgba(201, 232, 242, 0.5);
+    border: 4px solid #ADA7EC;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.listar_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.listar_container p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    width: 90%;
+}
+
+.cardListar .botao{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    
+}
+
+.cardListar .botao .btn-listar{
+    width: 100%;
+    height: 30px;
+
+    font-weight: 600;
+
+    background: #0168CD;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 53px;
+}
+
+.cardImagem{
+    position: relative;
+    width: 345px;
+    height: 209px;
+}
+
+.cardImagem svg{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 97%;
+}
