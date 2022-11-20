@@ -6,4 +6,8 @@ const Hemonucleo = sequelize.define("Hemonucleo", {
 	ponto: DataTypes.GEOMETRY("POINT"),
 });
 
+const point = { type: 'Point', coordinates: [-76.984722, 39.807222]}; // GeoJson format: [lng, lat]
+
+Hemonucleo.create({nome: '"Teste"', geometry: point });
+
 module.exports = Hemonucleo;
