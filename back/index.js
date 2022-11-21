@@ -19,7 +19,6 @@ const port = 3000;
 const hemonucleoController = require("./controllers/HemonucleoController");
 
 app.get("/hemonucleo", hemonucleoController.listarHemonucleos);
-app.get("/hemonucleo/:id", hemonucleoController.buscarHemonucleo);
 app.post("/hemonucleo", hemonucleoController.salvarHemonucleo);
 
 app.listen(port, () => {

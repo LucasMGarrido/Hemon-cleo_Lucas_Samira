@@ -1,4 +1,3 @@
-const { DataTypes } = require("sequelize");
 const sequelize = require("../database/db");
 
 const Hemonucleo = sequelize.define("Hemonucleo", {

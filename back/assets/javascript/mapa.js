@@ -33,16 +33,20 @@ function adicionar(){
   
   event.preventDefault()
 
-    // let lat = marker.getPosition().lat()
-    // let lng = marker.getPosition().lng()
+    let lat = marker.getPosition().lat();
+    let lng = marker.getPosition().lng();
+    console.log(lat + " " + lng);
 
-    let lat = document.getElementById("lat")
-    let lng = document.getElementById("lng")
+    document.getElementById("lat").value = lat;
+    document.getElementById("long").value = lng;
+    let hemoName = document.getElementById('hemoName').value;
 
     const obj = {
-        nome: document.getElementById('hemoName').value,
-        point: { type: 'Point', coordinates: [lng, lat ] },
+        nome: hemoName,
+        ponto: { type: 'Point', coordinates: [lng, lat ] },
     };
+
+    console.log("Objeto: " + obj.nome + " " + obj.ponto.coordinates);
 
     fetch("http://localhost:3000/hemonucleo",{
       method: 'POST',
@@ -52,6 +56,6 @@ function adicionar(){
       },
       body: JSON.stringify(obj)
     }).then(response =>{alert('Hemonúcleo cadastrado')})
-    .catch(error => alert('Algo de errado aconteceu.'));    
+    .catch(error => alert('Algo de errado aconteceu.')); 
 
 }

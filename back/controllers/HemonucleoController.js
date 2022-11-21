@@ -1,4 +1,5 @@
 const Hemonucleo = require("../models/Hemonucleo");
+const path = require("path");
 
 const salvarHemonucleo = async (req, res) => {
 	try {
@@ -10,22 +11,7 @@ const salvarHemonucleo = async (req, res) => {
 	}
 };
 
-const listarHemonucleos = async (req, res) => {
-	const Hemonucleos = await Hemonucleo.findAll();
-	res.status(200).send(Hemonucleos);
-};
-
-const buscarHemonucleo = async (req, res) => {
-	const Hemonucleo = await Hemonucleo.findByPk(req.params.id);
-	if (Hemonucleo === null) {
-		res.status(404).send("Hemonúcleo não encontrado");
-	} else {
-		res.status(200).send(Hemonucleo);
-	}
-};
-
 module.exports = {
 	salvarHemonucleo,
 	listarHemonucleos,
-	buscarHemonucleo
 };

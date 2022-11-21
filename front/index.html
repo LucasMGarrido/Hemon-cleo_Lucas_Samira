@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hemonúcleo</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="styles.css" />
+    <script src="../back/assets/javascript/mapa.js"></script>
 </head>
-<body>
+<body> 
     <section>
         <div class="containerHello">
             <div class="cardHello">
@@ -21,27 +23,25 @@
             </div>
         </div>
         <div class="containerCardsL1">
-            <div class="cardMapa">
-            
+            <div class="cardMapa" id="map">
         </div>
-            <div class="cardAdd">
+            <form class="cardAdd" action="#" method="POST">
                 <div class="test">
                     <h2>Adiconar hemonúcleo ao banco de dados</h2>
                     <div class="inputCenter">
-                        <input type="text" name="Nome do Hemonúcleo" placeholder="Nome do Hemonúcleo" />
-                        <input type="text" name="Cidade" placeholder="Cidade" />
+                        <input type="text" name="Nome do Hemonúcleo" id="hemoName" placeholder="Nome do Hemonúcleo" />
                     </div>
 
                     <div class="inputLadoLado">
-                        <input type="text" name="Altitude" placeholder="Altitude" />
-                        <input type="text" name="Latitude" placeholder="Latitude" />
+                        <input type="text" name="Latitude" id="lat" placeholder="Latitude" />
+                        <input type="text" name="Longitude" id="long" placeholder="Longitude" />
                     </div>
 
                     <div class="center_container">
-                        <button class="btn-add">Adicionar</button>
+                        <button class="btn-add" onclick="adicionar()">Adicionar</button>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
         <div class="containerCardsL2">
             <div class="cardMensagem">
@@ -64,5 +64,10 @@
             </div>
         </div>
     </section>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoZUdbkl5PIFDDl4CjpJVaZ-2jhu_si8A&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
 </body>
 </html>
