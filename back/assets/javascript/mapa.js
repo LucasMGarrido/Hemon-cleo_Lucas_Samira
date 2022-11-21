@@ -29,22 +29,29 @@ function addMarker(evt){
     marker.setPosition(evt.latLng);
 }
 
+function selecionaLocal(){
+
+  event.preventDefault();
+
+  let lat = marker.getPosition().lat();
+  let lng = marker.getPosition().lng();
+  console.log(lat + " " + lng);
+
+  document.getElementById("lat").value = lat;
+  document.getElementById("long").value = lng;
+  let hemoName = document.getElementById('hemoName').value;
+
+  const obj = {
+      nome: hemoName,
+      ponto: { type: 'Point', coordinates: [lng, lat ] },
+  };
+}
+
 function adicionar(){
   
-  event.preventDefault()
+  event.preventDefault();
 
-    let lat = marker.getPosition().lat();
-    let lng = marker.getPosition().lng();
-    console.log(lat + " " + lng);
-
-    document.getElementById("lat").value = lat;
-    document.getElementById("long").value = lng;
-    let hemoName = document.getElementById('hemoName').value;
-
-    const obj = {
-        nome: hemoName,
-        ponto: { type: 'Point', coordinates: [lng, lat ] },
-    };
+  selecionaLocal();
 
     console.log("Objeto: " + obj.nome + " " + obj.ponto.coordinates);
 
@@ -61,7 +68,7 @@ function adicionar(){
 }
 
 function listarMapas() {
-  
+
   fetch("http://localhost:3000/hemonucleo/")
       .then((res) => res.json())
       .then((hemonucleos) => {
