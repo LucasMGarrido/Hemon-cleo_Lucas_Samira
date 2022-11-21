@@ -59,3 +59,23 @@ function adicionar(){
     .catch(error => alert('Algo de errado aconteceu.')); 
 
 }
+
+function listarMapas() {
+  
+  fetch("http://localhost:3000/hemonucleo/%22")
+      .then((res) => res.json())
+      .then((hemonucleos) => {
+          marker = new google.maps.Marker({
+              map: map,
+          });
+
+          hemonucleos.forEach((element) => {
+              marker.setPosition(
+                  new google.maps.LatLng(
+                      element.ponto.coordinates[0],
+                      element.ponto.coordinates[1]
+                  )
+              );
+          });
+      });
+}
