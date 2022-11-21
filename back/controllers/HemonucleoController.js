@@ -11,6 +11,11 @@ const salvarHemonucleo = async (req, res) => {
 	}
 };
 
+const listarHemonucleos = async (req, res) => {
+	const Hemonucleos = await Hemonucleo.findAll();
+	res.status(200).send(Hemonucleos);
+};
+
 module.exports = {
 	salvarHemonucleo,
 	listarHemonucleos,
