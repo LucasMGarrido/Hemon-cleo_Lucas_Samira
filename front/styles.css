@@ -127,6 +127,8 @@ body{
 .btn-add{
     box-sizing: border-box;
 
+    margin-bottom: 20px;
+
     font-weight: 600;
 
     width: 90%;
@@ -143,6 +145,11 @@ body{
     display: flex;
     justify-content: center;
     margin: 0 0 35px 0;
+}
+
+#select{
+    background: #098050;
+    color:#ffff ;
 }
 
 
