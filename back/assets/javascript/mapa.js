@@ -62,7 +62,7 @@ function adicionar(){
 
 function listarMapas() {
   
-  fetch("http://localhost:3000/hemonucleo/%22")
+  fetch("http://localhost:3000/hemonucleo/")
       .then((res) => res.json())
       .then((hemonucleos) => {
           marker = new google.maps.Marker({
