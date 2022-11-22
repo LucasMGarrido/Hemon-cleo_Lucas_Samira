@@ -79,11 +79,11 @@ function listarMapas() {
             marker = new google.maps.Marker({
               map: map,
           });
-            //console.log(element);
+            console.log(element);
               marker.setPosition(
                   new google.maps.LatLng(
-                      element.ponto.coordinates[0],
-                      element.ponto.coordinates[1]
+                      element.ponto.coordinates[1],
+                      element.ponto.coordinates[0]
                   )
               );
           });
