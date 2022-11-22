@@ -35,25 +35,28 @@ function selecionaLocal(){
 
   let lat = marker.getPosition().lat();
   let lng = marker.getPosition().lng();
-  console.log(lat + " " + lng);
 
   document.getElementById("lat").value = lat;
   document.getElementById("long").value = lng;
-  let hemoName = document.getElementById('hemoName').value;
 
-  const obj = {
-      nome: hemoName,
-      ponto: { type: 'Point', coordinates: [lng, lat ] },
-  };
 }
 
 function adicionar(){
   
   event.preventDefault();
 
-  selecionaLocal();
+  let lat = marker.getPosition().lat();
+  let lng = marker.getPosition().lng();
+  //console.log(lat + " " + lng);
 
-    console.log("Objeto: " + obj.nome + " " + obj.ponto.coordinates);
+  let hemoName = document.getElementById('hemoName').value;
+
+  const obj = {
+      nome: hemoName,
+      ponto: { type: 'Point', coordinates: [lng, lat ] },
+  };
+
+    //console.log("Objeto: " + obj.nome + " " + obj.ponto.coordinates);
 
     fetch("http://localhost:3000/hemonucleo",{
       method: 'POST',
@@ -68,15 +71,15 @@ function adicionar(){
 }
 
 function listarMapas() {
-
   fetch("http://localhost:3000/hemonucleo/")
       .then((res) => res.json())
       .then((hemonucleos) => {
-          marker = new google.maps.Marker({
-              map: map,
-          });
 
           hemonucleos.forEach((element) => {
+            marker = new google.maps.Marker({
+              map: map,
+          });
+            //console.log(element);
               marker.setPosition(
                   new google.maps.LatLng(
                       element.ponto.coordinates[0],
